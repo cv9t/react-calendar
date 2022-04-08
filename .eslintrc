@@ -14,11 +14,12 @@
       }
     }
   },
-  "extends": ["airbnb", "airbnb-typescript", "plugin:@typescript-eslint/recommended"],
+  "extends": ["airbnb", "airbnb-typescript", "plugin:@typescript-eslint/recommended", "prettier"],
   "rules": {
+    "@typescript-eslint/no-unused-vars": ["error"],
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/function-component-definition": 0,
     "import/prefer-default-export": 0,
-    "@typescript-eslint/no-unused-vars": ["error"]
+    "react/no-array-index-key": 0
   }
 }
