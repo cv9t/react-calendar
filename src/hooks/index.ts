@@ -1,1 +1,1 @@
-export { useDateGrid } from './useDateGrid';
+export * from './useDateGrid';

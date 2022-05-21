@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 import { Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
 
-export const DateGridWrapper = styled.div`
+export const DateGridContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   overflow: hidden;
 `;
 
@@ -26,11 +26,11 @@ export const WeekdayList = styled.div`
 
 export const Weekday = styled(Typography)`
   flex: 1;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   text-align: center;
   text-transform: uppercase;
 
   &.current {
-    font-weight: 500;
+    font-weight: 600;
   }
 `;

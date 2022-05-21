@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
-import moment, { Moment } from 'moment';
-import { Tooltip, IconButton, Button, Typography, Toolbar } from '@mui/material';
+
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Tooltip, IconButton, Button, Typography, Toolbar } from '@mui/material';
+import moment, { Moment } from 'moment';
+
 import { StyledAppBar } from './AppBar.styled';
 
 interface IAppBarProps {
@@ -31,7 +33,7 @@ const AppBar: FC<IAppBarProps> = ({
         </IconButton>
       </Tooltip>
       <Tooltip title={moment().format('ll')}>
-        <Button variant="contained" onClick={todayMonthHandler} sx={{ mr: 3.5 }}>
+        <Button variant="contained" onClick={todayMonthHandler} sx={{ mr: 3.5, fontWeight: 600 }}>
           Today
         </Button>
       </Tooltip>

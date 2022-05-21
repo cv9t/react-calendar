@@ -1,3 +1,3 @@
-export { getCurrentWeekday } from './getCurrentWeekday';
-export { calcWeeksInMonth } from './calcWeeksInMonth';
-export { createDateGrid } from './createDateGrid';
+export * from './getCurrentWeekday';
+export * from './calcWeeksInMonth';
+export * from './createDateGrid';

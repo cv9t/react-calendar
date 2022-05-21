@@ -1,5 +1,7 @@
-import { Moment } from 'moment';
 import { useMemo } from 'react';
+
+import { Moment } from 'moment';
+
 import { DateRowType } from '../types';
 import { calcWeeksInMonth, createDateGrid, getCurrentWeekday } from './helpers';
 
@@ -12,9 +14,9 @@ const useDateGrid = (date: Moment): ReturnValue => {
   const dateGrid: DateRowType[] = useMemo(() => {
     const totalWeeks = calcWeeksInMonth(date);
     return createDateGrid(date, totalWeeks);
-  }, [date.month()]);
+  }, [date]);
 
-  const currentWeekday: number = useMemo(() => getCurrentWeekday(dateGrid), [date.date()]);
+  const currentWeekday: number = useMemo(() => getCurrentWeekday(dateGrid), [dateGrid]);
 
   return { dateGrid, currentWeekday };
 };

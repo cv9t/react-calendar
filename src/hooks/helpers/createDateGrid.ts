@@ -1,4 +1,5 @@
 import { Moment } from 'moment';
+
 import { DateRowType, DateCellType } from '../../types';
 
 const createDateGrid = (date: Moment, totalWeeks: number): DateRowType[] => {
