@@ -6,6 +6,7 @@ import dts from 'rollup-plugin-dts';
 import packageJson from './package.json';
 import { terser } from 'rollup-plugin-terser';
 import bundleSize from 'rollup-plugin-bundle-size';
+import babel from '@rollup/plugin-babel';
 
 export default [
   {
@@ -25,6 +26,13 @@ export default [
     plugins: [
       peerDepsExternal(),
       resolve(),
+      babel({
+        presets: [
+          '@babel/preset-env',
+          ['@babel/preset-react', { runtime: 'automatic' }],
+          '@babel/preset-typescript',
+        ],
+      }),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       terser(),
